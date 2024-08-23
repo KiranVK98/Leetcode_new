@@ -12,7 +12,7 @@ class Solution:
                     res[-1][1] = max(interval[1], res[-1][1])
 
                 else:
-                    res.append(interval)
+                    res.append(interval) #S
 
 
         return res
