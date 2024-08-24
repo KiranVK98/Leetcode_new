@@ -11,11 +11,13 @@ class Solution:
 
         ind = float('inf')
         for k,c in hash_map.items():
-            # print(c)
             if(c[1] == 1):
-                ind = min(ind,c[0])
+                return c[0]
+            # print(c)
+            # if(c[1] == 1):
+            #     ind = min(ind,c[0])
 
 
-
-        return -1 if ind == float('inf') else ind
+        return -1
+        # return -1 if ind == float('inf') else ind
 
