@@ -21,8 +21,32 @@ class Solution:
                 res = max(res, sums)
 
         return res
+'''
+class Solution:
+    def maximumSubarraySum(self, nums: List[int], k: int) -> int:
+        start = 0
 
-            
+        max_sum = 0
+
+        sums = 0
+
+        hash_set = set()
+        for end in range(len(nums)):
+            # print(start,end)
+            while(len(hash_set) == k or nums[end] in hash_set):
+                hash_set.remove(nums[start])
+                sums -= nums[start]
+                start += 1
+
+            sums += nums[end]
+            hash_set.add(nums[end])
+            if(end - start + 1 == k):
+                max_sum = max(max_sum,sums)
+
+        return max_sum
+
+
+'''
 
             
 
